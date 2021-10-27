@@ -46,14 +46,14 @@ namespace ExcelToJson
 
                         // Excelから指定の箇所を取得
                         string Rng = worksheet.Cell(Line).Value.ToString();
-                        values[cnt] = "{\"" + Line + "\":\"" + Rng + "\"" + "}";
+                        values[cnt] = "\"" + Line + "\":\"" + Rng + "\"";
                         cnt++;
                     }
 
                     // json ファイルに出力
-                    OutputJson = "{\"" + KeyName + "\":[";
+                    OutputJson = "{\"" + KeyName + "\":{";
                     string JsonValue = String.Join(",", values);
-                    OutputJson = OutputJson + JsonValue + "]}";
+                    OutputJson = OutputJson + JsonValue + "}}";
 
                     values = null;
                     string JsonFileName = Path.GetFileName(file).Replace(".xlsx", "");
