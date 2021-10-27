@@ -4,10 +4,10 @@
 
 ### 引数
 
-引数1：jsonのキーとなるExcelのRangeを表す文字列
-引数2：対象のExcelが保存されているフォルダ(複数可)
-引数3：出力後のjsonに与えるキー名
-引数4：json ファイルの出力先
+引数1：jsonのキーとなるExcelのRangeを表す文字列  
+引数2：対象のExcelが保存されているフォルダ(複数可)  
+引数3：出力後のjsonに与えるキー名  
+引数4：json ファイルの出力先  
 
 ### launch.json
 
@@ -103,17 +103,11 @@ A3に`test`
 
 ```json
 {
-    "range": [
-        {
-            "A1": "Yamada"
-        },
-        {
-            "A2": "Kento"
-        },
-        {
-            "A3": "test"
-        }
-    ]
+    "range": {
+        "A1": "Yamada",
+        "A2": "Kento",
+        "A3": "test"
+    }
 }
 ```
 
